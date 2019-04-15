@@ -9,8 +9,9 @@ There is the "index.js" file, this is the file used to run the project. It uses 
 create api endpoints to list; the exchanges included, the product pairs, ticker data, orderbook
 data and trade data.
 
-The exchangeScript file is used to make get requests to the actual exchange endpoints dependant on 
-the endpoint selected to be called.
+The exchangeScript file is used to make requests to the original exchange endpoints and is the
+main script of the project. Depending on the endpoint called, it will call the appropriate method
+and return a formatted response.
 
 The config file is used by the exchangeScript to map to the correct exchange file. Each exchange file
 has its own format conversion methods which are used by the exchangeScript. 
