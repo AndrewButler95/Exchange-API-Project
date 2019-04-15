@@ -44,7 +44,7 @@ module.exports = {
                 let tradeObject = {
                     F: tradeFlags,
                     ID: parseInt(tradeData['id'], 10),
-                    TS: tradeData['timestamp'],
+                    TS: parseFloat(tradeData['timestamp']),
                     Q: parseFloat(tradeData['qty']),
                     P: parseFloat(tradeData['price'])
                 };

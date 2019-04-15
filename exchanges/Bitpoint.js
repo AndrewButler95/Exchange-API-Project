@@ -45,7 +45,7 @@ module.exports = {
 
                 let tradeObject = {
                     TS:  Math.round(tradeData['time']/ 1000),
-                    ID: tradeData['id'],
+                    ID: parseFloat(tradeData['id']),
                     Q: parseFloat(tradeData['qty']),
                     P: parseFloat(tradeData['price'])
                 };
