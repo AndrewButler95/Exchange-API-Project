@@ -15,11 +15,9 @@ the endpoint selected to be called.
 The config file is used by the exchangeScript to map to the correct exchange file. Each exchange file
 has its own format conversion methods which are used by the exchangeScript. 
 
-# To run the project:
+## To run the project:
 
 "node index.js"
-
-Then in your browser
 
 To get a list of exchanges
 
