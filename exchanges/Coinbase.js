@@ -11,7 +11,21 @@ module.exports = {
     "orderbook": {
         "url": "https://api.pro.coinbase.com/products/{pair}/book?level=3",
         "getData": function(response, pair) {
-            return response;
+            let result = {bids: [], asks: []};
+
+            for (var i = 0; i < response.bids.length; i++) {
+                result.bids.push([
+                    response.bids[i][0],
+                    response.bids[i][1]
+                ]);
+            }
+            for (var i = 0; i < response.asks.length; i++) {
+                result.asks.push([
+                    response.asks[i][0],
+                    response.asks[i][1]
+                ]);
+            }
+            return result;
         }
     },
     "product": {

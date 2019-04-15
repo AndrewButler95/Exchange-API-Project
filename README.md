@@ -32,8 +32,6 @@ Methods : [product, ticker, trade, orderbook]
 
 Product : returns a array of pairs
 
-If the method is product then "pair" can be any text but cannot be empty
-
 Ticker : returns price and volume of the last 24hr for a exchange pair
 
 Trade : returns trade data for a exchange pair

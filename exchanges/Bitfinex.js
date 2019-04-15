@@ -10,7 +10,7 @@ module.exports = {
         }
     },
     "orderbook": {
-        "url": "https://api.bitfinex.com/v1/book/{pair}?limit_bids=2500&limit_asks=2500",
+        "url": "https://api.bitfinex.com/v1/book/{pair}?limit_bids=25&limit_asks=25",
         "getData": function (response, pair) {
             let result = { bids: [], asks: [] };
             result.bids = response.bids.map(function (item) {
@@ -41,7 +41,7 @@ module.exports = {
         }
     },
     "trade": {
-        "url": "https://api.bitfinex.com/v1/trades/{pair}?limit_trades=900",
+        "url": "https://api.bitfinex.com/v1/trades/{pair}?limit_trades=25",
         "getData": function (response, pair) {
             let allTrades = response;
             let result = [];
@@ -54,7 +54,6 @@ module.exports = {
                     TS: tradeData['timestamp'],
                     Q: parseFloat(tradeData['amount']),
                     P: parseFloat(tradeData['price']),
-                    TOTAL: parseFloat(tradeData['price']) * parseFloat(tradeData['amount'])
                 };
                 result.push(tradeObject)
             }
